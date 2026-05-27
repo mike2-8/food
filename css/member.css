@@ -4,8 +4,8 @@
 }
 
 .member-section .sec-title .sub-title {
-  color: #d8a03d;
-  font-size: 13px;
+  color: var(--primary-color);
+  font-size: var(--font-size);
   letter-spacing: 3px;
   font-weight: 700;
   display: block;
@@ -14,9 +14,9 @@
 
 .member-section .sec-title h2 {
   font-size: 38px;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: #2f3540;
+  color: var(--bs-dark);
   line-height: 1.2;
 }
 
@@ -28,42 +28,50 @@
   margin-bottom: 50px;
 }
 
+/* mũi tên ở dạng desktop */
 .member-arrows {
   display: flex;
   gap: 12px;
   padding-bottom: 10px;
 }
 
+/* Mobile: ẩn nút ở header, hiện nút ở dưới */
+.member-arrows-bottom {
+    display: none;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .member-arrows {
+        display: none;   /* ẩn nút trên header */
+    }
+    .member-arrows-bottom {
+        display: flex;   /* hiện nút ở dưới */
+    }
+}
+
+
 .arrow-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1.5px solid #d8a03d;
+  border: 1.5px solid var(--primary-color);
   background: transparent;
-  color: #d8a03d;
+  color: var(--primary-color);
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .arrow-btn:hover {
-  background: #d8a03d;
-  color: #ffffff;
+  background: var(--primary-color);
+  color: var(--bs-white);
 }
 
 .member-carousel-outer {
   overflow: hidden;
-}
-
-.member-carousel {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-}
-
-.member-block {
-  flex: 0 0 calc(33.333% - 14px);
-  min-width: 0;
 }
 
 .member-block .inner-box {
@@ -105,8 +113,8 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: #d8a03d;
-  color: #ffffff;
+  background: var(--primary-color);
+  color: var(--bs-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +125,7 @@
 }
 
 .member-block .share-btn:hover {
-  background: #2f3540;
+  background: var(--bs-dark);
 }
 
 /* Social icons */
@@ -144,12 +152,12 @@
 .member-block .social-icons a {
   width: 36px;
   height: 36px;
-  background: #ffffff;
+  background: var(--bs-white);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2f3540;
+  color: var(--bs-dark);
   font-size: 14px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -157,12 +165,12 @@
 }
 
 .member-block .social-icons a:hover {
-  background: #d8a03d;
-  color: #ffffff;
+  background: var(--primary-color);
+  color: var(--bs-white);
 }
 
 .member-block .info-box {
-  background: #ffffff;
+  background: var(--bs-white);
   border-radius: 0 0 8px 8px;
   padding: 35px 20px 20px;
   width: 100% !important;
@@ -172,12 +180,12 @@
 .member-block .info-box h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #2f3540;
-  font-family: 'Oswald', sans-serif;
+  color: var(--bs-dark);
+  font-family: var(--font-heading);
   margin-bottom: 4px;
 }
 
 .member-block .info-box span {
-  font-size: 14px;
+  font-size: var(--font-size);
   color: #777;
 }

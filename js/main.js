@@ -74,31 +74,10 @@ document.querySelectorAll('.sidebar-dropdown > a').forEach(link => {
     });
 });
 
-// ---- 4. MEMBER CAROUSEL (arrows) ----
-const memberCarousel = document.querySelector('.member-carousel');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const memberBlocks = document.querySelectorAll('.member-block');
-let memberIndex = 0;
-const total = memberBlocks.length;
-
-function slideMembers() {
-    const blockWidth = memberBlocks[0].offsetWidth + 20;
-    memberCarousel.style.transform = `translateX(-${memberIndex * blockWidth}px)`;
-}
-
-nextBtn.addEventListener('click', () => {
-    memberIndex = (memberIndex + 1) % total;
-    slideMembers();
-});
-
-prevBtn.addEventListener('click', () => {
-    memberIndex = (memberIndex - 1 + total) % total;
-    slideMembers();
-});
-
-// ---- 5. OWL CAROUSEL ----
+// ---- 4 & 5. OWL CAROUSEL ----
 $(document).ready(function () {
+
+    // Project carousel
     $('.project-carousel').owlCarousel({
         loop: true,
         margin: 15,
@@ -112,4 +91,28 @@ $(document).ready(function () {
             1204: { items: 4 }
         }
     });
+
+    // Member carousel
+    var memberOwl = $('.member-carousel').owlCarousel({
+        loop: false,
+        margin: 20,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+
+    // Nút mũi tên desktop và mobile
+    $('.prev-btn, .prev-btn-bottom').on('click', function () {
+        memberOwl.trigger('prev.owl.carousel');
+    });
+
+    $('.next-btn, .next-btn-bottom').on('click', function () {
+        memberOwl.trigger('next.owl.carousel');
+    });
+
 });
