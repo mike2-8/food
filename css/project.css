@@ -4,14 +4,15 @@
 }
 
 .project-section .large-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 30px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 40px;          
 }
 
 .project-section .sec-title {
   text-align: center;
   margin-bottom: 40px;
+  padding: 0 30px;     
 }
 
 .project-section .sec-title .sub-title {
@@ -58,7 +59,6 @@
 .project-block .image-box {
   position: relative;
   overflow: hidden;
-
 }
 
 .project-block .image-box figure.image {
@@ -73,7 +73,7 @@
 
 .project-block .image-box figure.image img {
   width: 100%;
-  height: 400px;
+  height: 550px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -105,6 +105,7 @@
 
 .project-block .info-box .title {
   display: block;
+  width: fit-content;      /* ← chỉ rộng vừa đủ chữ */
   background: var(--bs-white);
   padding: 10px 15px;
   transform: translateX(-200%);
@@ -136,49 +137,27 @@
   color: var(--primary-color);
 }
 
-
-
 /* Responsive */
-@media (max-width: 1024px) {
-    .project-block {
-        flex: 0 0 calc(33.333% - 10px); /* 3 card 1 slide */
-    }
-
-    .project-section .sec-title h2 {
-        font-size: 36px;
-    }
-}
-
 @media (max-width: 992px) {
-    .project-block {
-        flex: 0 0 calc(50% - 8px); /* 2 card 1 slide */
-    }
+  .project-section .sec-title h2 {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 768px) {
-    .project-block {
-        flex: 0 0 calc(50% - 8px); /* 2 card nhưng nhỏ hơn */
-    }
-
-    .project-block .image-box figure.image img {
-        height: 320px; /* giảm chiều cao ảnh */
-    }
-
-    .project-section .sec-title h2 {
-        font-size: 28px;
-    }
+  .project-block .image-box figure.image img {
+    height: 320px;
+  }
+  .project-section .sec-title h2 {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 576px) {
-    .project-block {
-        flex: 0 0 100%; /* 1 card 1 slide */
-    }
-
-    .project-block .image-box figure.image img {
-        height: 280px;
-    }
-
-    .project-section .sec-title h2 {
-        font-size: 24px;
-    }
+  .project-block .image-box figure.image img {
+    height: 250px;
+  }
+  .project-section .sec-title h2 {
+    font-size: 24px;
+  }
 }
