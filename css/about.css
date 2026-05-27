@@ -1,0 +1,247 @@
+/* ABOUT US SECTION */
+.about-section {
+  background: #ffffff;
+  padding: 140px 0 160px 0;
+  position: relative;
+  margin-top: -80px;
+}
+
+.auto-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.about-section .row {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+/* Row lồng bên trong chứa 2 info-box */
+.about-section .content-column .row {
+  gap: 0;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.about-section .content-column {
+  flex: 1;
+}
+
+.about-section .image-column {
+  flex: 1;
+  position: relative;
+  overflow: visible;
+}
+
+/* LEFT COLUMN */
+.about-section .sec-title .sub-title {
+  color: #d8a03d;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about-section .sec-title h2 {
+  font-size: 46px;
+  line-height: 1.15;
+  font-family: 'Oswald', sans-serif;
+  color: #2f3540;
+  margin-bottom: 30px;
+}
+
+.about-section .text {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #555555;
+  margin-bottom: 45px;
+}
+
+/* Info Box */
+.about-section .info-box {
+  width: 50%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.about-section .inner-box {
+  background: #f8f8f8;
+  padding: 25px 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.about-section .info-box .inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-section .icon-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-section .info-box .icon {
+  font-size: 38px;
+  color: #d8a03d;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.about-section .info-box .title-box h4 {
+  color: #2f3540;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.about-section .info-box .text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 0;
+}
+
+.about-section .icon {
+  font-size: 52px;
+  color: #d8a03d;
+  margin-bottom: 20px;
+}
+
+.about-section .title-box h4 {
+  color: #2f3540 !important;
+  font-size: 20px;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+/* AUTHOR BOX */
+.about-section .author-box {
+  margin-top: 35px;
+}
+
+.about-section .author-box .inner-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 25px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.about-section .author-box img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-section .author-info {
+  margin-right: 30px;
+}
+
+.about-section .author-info .name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2f3540;
+}
+
+.about-section .author-info .designation {
+  color: #777;
+  font-size: 15px;
+}
+
+/* Phone Call */
+.about-section .phone-call {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8a03d;
+  flex-shrink: 0;
+}
+
+.about-section .phone-call i {
+  font-size: 22px;
+  color: #d8a03d;
+}
+
+.about-section .phone-call div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section .phone-call small {
+  font-size: 13px;
+  color: #777;
+  display: block;
+}
+
+.about-section .phone-call strong {
+  font-size: 16.5px;
+  color: #2f3540;
+  display: block;
+}
+
+/* RIGHT COLUMN */
+.about-section .image-column .image-box img {
+  width: 70%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.about-section .overlapping-image {
+  position: absolute;
+  bottom: 80px;
+  right: -40px;
+  width: 42%;
+  border: 12px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+/* 250+ Box */
+.about-section .experience-box {
+  position: absolute;
+  bottom: -35px;
+  left: -25px;
+  background: #e89c4c;
+  color: white;
+  padding: 25px 32px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(232, 156, 76, 0.5);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-section .experience-box .icon {
+  font-size: 42px;
+  color: white;
+}
+
+.about-section .experience-box h5 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.about-section .experience-box h6 {
+  margin: 4px 0 0;
+  font-size: 15.5px;
+  font-weight: 500;
+}

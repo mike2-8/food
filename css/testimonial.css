@@ -1,0 +1,128 @@
+/* TESTIMONIAL SECTION */
+.testimonial-section {
+    background: #2f3540;
+    padding: 100px 0;
+    position: relative;
+}
+
+.testimonial-section .sec-title {
+    margin-bottom: 60px;
+}
+
+.testimonial-section .sec-title .sub-title {
+    color: #d8a03d;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.testimonial-section .sec-title .sub-title::before,
+.testimonial-section .sec-title .sub-title::after {
+    content: '';
+    width: 28px;
+    height: 2px;
+    background: #d8a03d;
+    display: block;
+}
+
+.testimonial-section .sec-title h2 {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ROW */
+.testimonial-section .row {
+    gap: 30px;
+}
+
+/* BLOCK */
+.testimonial-block {
+    flex: 1;
+}
+
+.testimonial-block .inner-box {
+    background: #3a4150;
+    padding: 50px 40px 40px;
+    text-align: center;
+    border-bottom: 2px solid #d8a03d;
+    position: relative;
+}
+
+/* AVATAR */
+.testimonial-block .author-image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.testimonial-block .author-image img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-block .author-image:hover img {
+    transform: scale(1.08);
+}
+
+/* QUOTE ICON */
+.testimonial-block .quote-icon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 32px;
+    height: 32px;
+    background: #d8a03d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-block .quote-icon i {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* TEXT */
+.testimonial-block .text p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* AUTHOR INFO */
+.testimonial-block .author-info {
+    margin-bottom: 15px;
+}
+
+.testimonial-block .author-info h4 {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.testimonial-block .author-info span {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* RATING */
+.testimonial-block .rating i {
+    color: #d8a03d;
+    font-size: 16px;
+    margin: 0 2px;
+}

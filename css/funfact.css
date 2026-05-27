@@ -1,0 +1,101 @@
+/* FUN FACT SECTION */
+.fun-fact-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.fun-fact-section .row {
+    display: flex;
+    gap: 24px;
+}
+
+/* BLOCK */
+.counter-block {
+    flex: 1;
+}
+
+.counter-block .inner {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 20px 20px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.counter-block .inner:hover {
+    background: #d8a03d;
+    border-color: #d8a03d;
+}
+
+/* ICON FLIP */
+.icon-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    perspective: 600px;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.counter-block .inner:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.face-front,
+.face-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.face-front {
+    background: #d8a03d;
+    color: #ffffff;
+}
+
+.face-back {
+    background: #ffffff;
+    color: #d8a03d;
+    transform: rotateY(-180deg) scaleX(-1);
+}
+
+/* TITLE */
+.counter-block .counter-title {
+    font-size: 15px;
+    color: #777777;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: color 0.4s ease;
+}
+
+.counter-block .inner:hover .counter-title {
+    color: #ffffff;
+}
+
+/* COUNT */
+.counter-block .count-box {
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: #2f3540;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+
+.counter-block .inner:hover .count-box {
+    color: #ffffff;
+}

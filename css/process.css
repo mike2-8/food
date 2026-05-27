@@ -1,0 +1,101 @@
+.process-section {
+  background: #f5f5f5;
+  padding: 30px 0 80px;
+}
+
+.process-section .sec-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.process-section .sec-title h2 {
+  color: #2f3540;
+}
+
+.process-section .row {
+  gap: 30px;
+  padding-top: 40px; 
+  display: flex;
+}
+
+.process-block {
+  flex: 1;
+}
+
+.process-block .inner-box {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  padding: 40px 30px;
+  position: relative;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  overflow: visible;
+}
+
+
+/* Number */
+.process-block .num {
+  position: absolute;
+  top: -35px;
+  right: 20px;
+  font-size: 72px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #2f3540;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.process-block .inner-box:hover .num {
+  color: #d8a03d;
+}
+
+/* Icon */
+.process-block .icon-box {
+  width: 70px;
+  height: 70px;
+  background: #fff5e6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: background 0.4s ease;
+}
+
+.process-block .icon-box i {
+  font-size: 32px;
+  color: #d8a03d;
+  transition: color 0.4s ease;
+}
+
+.process-block .inner-box:hover .icon-box i {
+  color: #2f3540;
+}
+
+/* Title */
+.process-block h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f3540;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 15px;
+  transition: color 0.4s ease;
+}
+
+.process-block .inner-box:hover h4 {
+  color: #2f3540;
+}
+
+/* Text */
+.process-block p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #777;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+.process-block .inner-box:hover p {
+  color: #777;
+}

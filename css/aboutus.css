@@ -1,0 +1,115 @@
+/* ABOUT SECTION */
+.about-section-two {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.about-section-two .row.g-0 {
+    min-height: 600px;
+    display: flex;
+}
+
+/* IMAGE COLUMN */
+.about-section-two .image-column {
+    padding: 0;
+}
+
+.about-section-two .image-column .inner-column {
+    height: 100%;
+}
+
+.about-section-two .image-column figure.image {
+    margin: 0;
+    height: 100%;
+}
+
+.about-section-two .image-column figure.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENT COLUMN */
+.about-section-two .content-column .inner-column {
+    padding: 80px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;;
+    height: 100%;
+    max-width: 850px;
+}
+
+/* SUB TITLE */
+.about-section-two .sub-title {
+    color: #d8a03d;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* H2 */    
+.about-section-two h2 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #2f3540;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* TEXT */
+.about-section-two .text p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+
+/* LIST */
+.about-section-two .list-style-two {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.about-section-two .list-style-two.two-column li {
+    width: 50%;
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10x 0;
+    margin-top: 10px;
+}
+
+.about-section-two .list-style-two li .fa-check-circle {
+    color: #d8a03d;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* BUTTON */
+.about-section-two .theme-btn.btn-style-one {
+    display: inline-block;
+    background: #d8a03d;
+    color: #ffffff;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.about-section-two .theme-btn.btn-style-one:hover {
+    background: #2f3540;
+}

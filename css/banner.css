@@ -1,0 +1,167 @@
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;           
+  margin-top: 0;
+}
+
+/* LEFT - IMAGE */
+.banner-left {
+  width: 50%;
+  height: calc(100vh - 90px);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.banner-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT - CONTENT */
+.banner-right {
+  width: 50%;
+  min-height: calc(100vh - 90px);
+  background: var(--bs-white);
+  color: var(--bs-dark);
+  padding: 90px 80px 80px 80px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Slant effect */
+.banner-right::before {
+  content: "";
+  position: absolute;
+  left: -130px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: var(--bs-white);
+  transform: skewX(-18deg);
+  z-index: 1;
+  box-shadow: -15px 0 40px rgba(0,0,0,0.12);
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  left: -25px;
+  top: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 3;
+}
+
+.dots span {
+  width: 7px;
+  height: 7px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: var(--primary-color);
+  letter-spacing: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+/* TITLE */
+.banner-right h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 25px;
+  z-index: 2;
+  position: relative;
+}
+
+/* TEXT */
+.banner-right p {
+  color: #555555;
+  line-height: 1.8;
+  font-size: 16.5px;
+  max-width: 460px;
+  margin-bottom: 40px;
+  z-index: 2;
+  position: relative;
+}
+
+/* ACTION */
+.banner-action {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  z-index: 2;
+  position: relative;
+}
+
+/* BUTTON */
+.btn-banner {
+  background: var(--primary-color);
+  color: var(--bs-white);
+  padding: 18px 48px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: var(--bs-dark);
+}
+
+/* PHONE */
+.phone-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.phone-icon {
+  font-size: 36px;
+  color: var(--primary-color);
+}
+
+.phone-box h4 {
+  margin: 0;
+  color: var(--bs-dark);
+  font-size: 23px;
+}
+
+.phone-box span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* LINE DECORATION */
+.line-decoration {
+  position: absolute;
+  right: 60px;
+  bottom: 100px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.line-decoration span {
+  width: 6px;
+  height: 55px;
+  background: var(--primary-color);
+  transform: skewX(-35deg);
+}
