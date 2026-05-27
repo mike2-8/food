@@ -1,5 +1,5 @@
 .project-section {
-  background: #2f3540;
+  background: var(--bs-dark);
   padding: 80px 0 60px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .project-section .sec-title .sub-title {
-  color: #d8a03d;
+  color: var(--primary-color);
   font-size: 15px;
   letter-spacing: 3px;
   font-weight: 600;
@@ -32,30 +32,19 @@
   display: inline-block;
   width: 30px;
   height: 2px;
-  background: #d8a03d;
+  background: var(--primary-color);
 }
 
 .project-section .sec-title h2 {
   font-size: 46px;
-  font-family: 'Oswald', sans-serif;
-  color: #ffffff;
+  font-family: var(--font-heading);
+  color: var(--bs-white);
   line-height: 1.2;
   margin-bottom: 0;
 }
 
 .carousel-outer {
   overflow: hidden;
-}
-
-.project-carousel {
-  display: flex;
-  gap: 15px;
-  transition: transform 0.5s ease;
-}
-
-.project-block {
-  flex: 0 0 calc(25% - 12px);
-  min-width: 0;
 }
 
 .project-block .inner-box {
@@ -84,7 +73,7 @@
 
 .project-block .image-box figure.image img {
   width: 100%;
-  height: 480px;
+  height: 400px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -107,7 +96,7 @@
 
 .project-block .info-box .cat {
   display: inline-block;
-  background: #d8a03d;
+  background: var(--primary-color);
   padding: 4px 12px;
   margin-bottom: 8px;
   transform: translateX(-200%);
@@ -116,7 +105,7 @@
 
 .project-block .info-box .title {
   display: block;
-  background: #ffffff;
+  background: var(--bs-white);
   padding: 10px 15px;
   transform: translateX(-200%);
   transition: transform 0.4s ease 0.15s;
@@ -128,8 +117,8 @@
 }
 
 .project-block .info-box .cat a {
-  color: #ffffff;
-  font-size: 13px;
+  color: var(--bs-white);
+  font-size: var(--font-size);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 1px;
@@ -138,32 +127,58 @@
 .project-block .info-box .title a {
   font-size: 18px;
   font-weight: 700;
-  color: #2f3540;
+  color: var(--bs-dark);
   text-decoration: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .project-block .info-box .title a:hover {
-  color: #d8a03d;
+  color: var(--primary-color);
 }
 
-/* Dots Navigation */
-.dots-nav {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .project-block {
+        flex: 0 0 calc(33.333% - 10px); /* 3 card 1 slide */
+    }
+
+    .project-section .sec-title h2 {
+        font-size: 36px;
+    }
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid #d8a03d;
-  cursor: pointer;
-  transition: background 0.3s;
+@media (max-width: 992px) {
+    .project-block {
+        flex: 0 0 calc(50% - 8px); /* 2 card 1 slide */
+    }
 }
 
-.dot.active {
-  background: #d8a03d;
+@media (max-width: 768px) {
+    .project-block {
+        flex: 0 0 calc(50% - 8px); /* 2 card nhưng nhỏ hơn */
+    }
+
+    .project-block .image-box figure.image img {
+        height: 320px; /* giảm chiều cao ảnh */
+    }
+
+    .project-section .sec-title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-block {
+        flex: 0 0 100%; /* 1 card 1 slide */
+    }
+
+    .project-block .image-box figure.image img {
+        height: 280px;
+    }
+
+    .project-section .sec-title h2 {
+        font-size: 24px;
+    }
 }
