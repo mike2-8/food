@@ -232,3 +232,31 @@
         font-size: 36px;
     }
 }
+
+@media (max-width: 992px) {
+    .services-block {
+        flex: 0 0 calc(50% - 15px);
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-block {
+        flex: 0 0 100%; /* mỗi card full width, xếp dọc theo cột */
+        width: 100%;
+    }
+
+    .sec-title.text-center h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-section {
+        padding: 60px 0 40px 0; /* giảm padding trên dưới cho mobile có inch nhỏ */
+    }
+
+    .sec-title.text-center h2 {
+        font-size: 24px;
+    }
+}
