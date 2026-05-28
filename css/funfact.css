@@ -1,6 +1,6 @@
 /* FUN FACT SECTION */
 .fun-fact-section {
-    background: #ffffff;
+    background: var(--bs-white);
     padding: 80px 0;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .counter-block .inner {
-    background: #ffffff;
+    background: var(--bs-white);
     border: 1px solid #eeeeee;
     border-radius: 12px;
     padding: 20px 20px 40px;
@@ -25,8 +25,8 @@
 }
 
 .counter-block .inner:hover {
-    background: #d8a03d;
-    border-color: #d8a03d;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 /* ICON FLIP */
@@ -63,13 +63,13 @@
 }
 
 .face-front {
-    background: #d8a03d;
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--bs-white);
 }
 
 .face-back {
-    background: #ffffff;
-    color: #d8a03d;
+    background: var(--bs-white);
+    color: var(--primary-color);
     transform: rotateY(-180deg) scaleX(-1);
 }
 
@@ -83,19 +83,37 @@
 }
 
 .counter-block .inner:hover .counter-title {
-    color: #ffffff;
+    color: var(--bs-white);
 }
 
 /* COUNT */
 .counter-block .count-box {
     font-size: 42px;
     font-weight: 700;
-    font-family: 'Oswald', sans-serif;
-    color: #2f3540;
+    font-family: var(--font-heading);
+    color: var(--bs-dark);
     line-height: 1;
     transition: color 0.4s ease;
 }
 
 .counter-block .inner:hover .count-box {
-    color: #ffffff;
+    color: var(--bs-white);
+}
+
+@media (max-width: 1200px) {
+    .fun-fact-section .row {
+        flex-wrap: wrap;
+    }
+
+    .counter-block {
+        flex: 0 0 calc(50% - 12px);    /* 2 card mỗi hàng */
+        width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .counter-block {
+        flex: 0 0 100%;                
+        width: 100%;
+    }
 }
