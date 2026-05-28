@@ -75,15 +75,15 @@
 .footer-title {
     font-size: 22px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--bs-white);
     margin-bottom: 24px;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-heading);
 }
  
 /* ABOUT */
 .footer-about p {
     font-size: 15px;
-    color: rgb(255, 255, 255);
+    color: var(--bs-white);
     line-height: 1.8;
     margin-bottom: 24px;
     font-family: sans-serif;
@@ -104,20 +104,20 @@
     border-right: none;
     padding: 0 16px;
     font-size: 15px;
-    color: #ffffff;
+    color: var(--bs-white);
     outline: none;
     font-family: sans-serif;
 }
  
 .footer-newsletter input::placeholder {
-    color: rgb(255, 255, 255);
+    color: var(--bs-white);
 }
  
 .footer-newsletter button {
     width: 50px;
-    background: #d8a03d;
+    background: var(--primary-color);
     border: none;
-    color: #ffffff;
+    color: var(--bs-white);
     font-size: 15px;
     cursor: pointer;
     transition: background 0.3s;
@@ -143,7 +143,7 @@
  
 .footer-links a {
     font-size: 15px;
-    color: rgb(255, 255, 255);
+    color: var(--bs-white);
     text-decoration: none;
     font-family: sans-serif;
     font-weight: 400;
@@ -152,7 +152,7 @@
 }
  
 .footer-links a:hover {
-    color: #d8a03d;
+    color: var(--primary-color);
     padding-left: 4px;
 }
  
@@ -165,7 +165,7 @@
  
 .footer-links.has-arrow li::before {
     content: '›';
-    color: #d8a03d;
+    color: var(--primary-color);
     font-size: 20px;
     line-height: 1;
     flex-shrink: 0;
@@ -174,7 +174,7 @@
 /* CONTACT */
 .footer-contact > p {
     font-size: 15px;
-    color: rgb(255, 255, 255);
+    color: var(--bs-white);
     line-height: 1.8;
     margin-bottom: 20px;
     font-family: sans-serif;
@@ -198,7 +198,7 @@
 }
  
 .footer-contact-list i {
-    color: #d8a03d;
+    color: var(--primary-color);
     font-size: 15px;
     margin-top: 2px;
     flex-shrink: 0;
@@ -211,7 +211,7 @@
 }
  
 .footer-contact-list a:hover {
-    color: #d8a03d;
+    color: var(--primary-color);
 }
  
 /* BOTTOM BAR */
@@ -244,12 +244,62 @@
  
 .footer-bottom-links a {
     font-size: 14px;
-    color: #ffffff;
+    color: var(--bs-white);
     text-decoration: none;
     font-family: sans-serif;
     transition: color 0.3s;
 }
  
 .footer-bottom-links a:hover {
-    color: #d8a03d;
+    color: var(--primary-color);
+}
+
+@media (max-width: 1402px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;  /* ← 2 cột */
+        gap: 40px;
+    }
+
+    .footer-grid > .footer-col:nth-child(2) {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-bottom-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;  /* ← 1 cột */
+        gap: 30px;
+    }
+
+    .footer-top-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-newsletter {
+        max-width: 100%;    /* ← để thanh email full trang */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-bottom-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-main {
+        padding: 40px 0 30px;
+    }
 }

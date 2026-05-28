@@ -165,3 +165,54 @@
   background: var(--primary-color);
   transform: skewX(-35deg);
 }
+
+@media (max-width: 992px) {
+    .banner {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .banner-left {
+        display: none;          
+    }
+
+    .banner-right {
+        width: 100%;
+        min-height: 100vh;
+        padding: 120px 40px 80px;
+        text-align: center;
+        align-items: center;   
+    }
+
+    .banner-right::before {
+        display: none;          /* ← ẩn đường chéo */
+    }
+
+    .dots {
+        display: none;          
+    }
+
+    .banner-right p {
+        max-width: 100%;
+    }
+
+    .banner-action {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .line-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-right {
+        padding: 100px 20px 60px;
+    }
+
+    .banner-right h1 {
+        font-size: 36px;
+    }
+}

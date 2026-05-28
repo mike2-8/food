@@ -1,6 +1,6 @@
 /* ABOUT SECTION */
 .about-section-two {
-    background: #ffffff;
+    background: var(--bs-white);
     overflow: hidden;
 }
 
@@ -42,7 +42,7 @@
 
 /* SUB TITLE */
 .about-section-two .sub-title {
-    color: #d8a03d;
+    color: var(--primary-color);
     letter-spacing: 2px;
     font-size: 12px;
     font-weight: 700;
@@ -56,7 +56,7 @@
     font-size: 50px;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    color: #2f3540;
+    color: var(--bs-dark);
     line-height: 1.2;
     margin-bottom: 25px;
 }
@@ -92,7 +92,7 @@
 }
 
 .about-section-two .list-style-two li .fa-check-circle {
-    color: #d8a03d;
+    color: var(--primary-color);
     font-size: 16px;
     flex-shrink: 0;
 }
@@ -100,8 +100,8 @@
 /* BUTTON */
 .about-section-two .theme-btn.btn-style-one {
     display: inline-block;
-    background: #d8a03d;
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--bs-white);
     padding: 16px 40px;
     text-decoration: none;
     font-weight: 700;
