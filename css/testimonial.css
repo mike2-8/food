@@ -1,6 +1,6 @@
 /* TESTIMONIAL SECTION */
 .testimonial-section {
-    background: #2f3540;
+    background: var(--bs-dark);
     padding: 100px 0;
     position: relative;
 }
@@ -10,9 +10,9 @@
 }
 
 .testimonial-section .sec-title .sub-title {
-    color: #d8a03d;
+    color: var(--primary-color);
     letter-spacing: 3px;
-    font-size: 13px;
+    font-size: var(--font-size);
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -26,41 +26,44 @@
     content: '';
     width: 28px;
     height: 2px;
-    background: #d8a03d;
+    background: var(--primary-color);
     display: block;
 }
 
 .testimonial-section .sec-title h2 {
-    color: #ffffff;
+    color: var(--bs-white);
     font-size: 48px;
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
 }
 
-/* ROW */
-.testimonial-section .row {
-    gap: 30px;
+/* CAROUSEL */
+.testimonial-carousel {
+    overflow: hidden;
+}
+
+.testimonial-carousel .owl-stage-outer {
+    overflow: visible !important;
+    padding-top: 55px;
 }
 
 /* BLOCK */
-.testimonial-block {
-    flex: 1;
-}
-
 .testimonial-block .inner-box {
-    background: #3a4150;
-    padding: 50px 40px 40px;
+    background: #2d3748;
+    padding: 60px 40px 40px;
     text-align: center;
-    border-bottom: 2px solid #d8a03d;
+    border-bottom: 2px solid var(--primary-color);
     position: relative;
 }
 
 /* AVATAR */
 .testimonial-block .author-image {
-    position: relative;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
     display: inline-block;
-    margin-bottom: 30px;
 }
 
 .testimonial-block .author-image img {
@@ -82,7 +85,7 @@
     right: -5px;
     width: 32px;
     height: 32px;
-    background: #d8a03d;
+    background: var(--primary-color);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -90,7 +93,7 @@
 }
 
 .testimonial-block .quote-icon i {
-    color: #ffffff;
+    color: var(--bs-white);
     font-size: 14px;
 }
 
@@ -108,7 +111,7 @@
 }
 
 .testimonial-block .author-info h4 {
-    color: #ffffff;
+    color: var(--bs-white);
     font-size: 18px;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
@@ -122,7 +125,14 @@
 
 /* RATING */
 .testimonial-block .rating i {
-    color: #d8a03d;
+    color: var(--primary-color);
     font-size: 16px;
     margin: 0 2px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .testimonial-section .sec-title h2 {
+        font-size: 32px;
+    }
 }

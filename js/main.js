@@ -99,8 +99,9 @@ $(document).ready(function () {
         nav: false,
         dots: false,
         autoplay: false,
+        items: 1,
         responsive: {
-            0: { items: 1 },
+    
             576: { items: 2 },
             992: { items: 3 }
         }
@@ -115,4 +116,17 @@ $(document).ready(function () {
         memberOwl.trigger('next.owl.carousel');
     });
 
+});
+
+// Testimonial carousel
+$('.testimonial-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: false,
+    dots: true,
+    autoplay: false,
+    responsive: {
+        0: { items: 1 },
+        992: { items: 2 }    
+    }
 });

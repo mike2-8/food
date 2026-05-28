@@ -111,5 +111,36 @@
 }
 
 .about-section-two .theme-btn.btn-style-one:hover {
-    background: #2f3540;
+    background: var(--bs-dark);
+}
+
+@media (max-width: 991px) {
+    .about-section-two .image-column {
+        display: none;      /* ← ẩn ảnh */
+    }
+
+    .about-section-two .row.g-0 {
+        min-height: unset;
+    }
+
+    .about-section-two .content-column .inner-column {
+        padding: 60px 40px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section-two .list-style-two.two-column li {
+        width: 100%;    /* ← từ 50% thành 100%, gộp thành 1 cột */
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section-two .content-column .inner-column {
+        padding: 40px 20px;
+    }
+
+    .about-section-two h2 {
+        font-size: 32px;
+    }
 }

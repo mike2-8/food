@@ -73,7 +73,8 @@
 
 .project-block .image-box figure.image img {
   width: 100%;
-  height: 550px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -145,18 +146,12 @@
 }
 
 @media (max-width: 768px) {
-  .project-block .image-box figure.image img {
-    height: 320px;
-  }
   .project-section .sec-title h2 {
     font-size: 28px;
   }
 }
 
 @media (max-width: 576px) {
-  .project-block .image-box figure.image img {
-    height: 250px;
-  }
   .project-section .sec-title h2 {
     font-size: 24px;
   }
