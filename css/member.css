@@ -13,7 +13,7 @@
 }
 
 .member-section .sec-title h2 {
-  font-size: 38px;
+  font-size: 48px;
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--bs-dark);
@@ -37,19 +37,22 @@
 
 /* Mobile: ẩn nút ở header, hiện nút ở dưới */
 .member-arrows-bottom {
-    display: none;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 30px;
+  display: none;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
 }
 
 @media (max-width: 1402px) {
-    .member-arrows {
-        display: none;   /* ẩn nút trên header */
-    }
-    .member-arrows-bottom {
-        display: flex;   /* hiện nút ở dưới */
-    }
+  .member-arrows {
+    display: none;
+    /* ẩn nút trên header */
+  }
+
+  .member-arrows-bottom {
+    display: flex;
+    /* hiện nút ở dưới */
+  }
 }
 
 
@@ -108,8 +111,9 @@
 /* Share button */
 .member-block .share-btn {
   position: absolute;
-  top: -23px;  
-  margin-bottom: -23px;         /* ← đẩy xuống đáy info-box */
+  top: -23px;
+  margin-bottom: -23px;
+  /* ← đẩy xuống đáy info-box */
   right: 55px;
   width: 46px;
   height: 46px;
@@ -161,7 +165,7 @@
   color: var(--bs-dark);
   font-size: 14px;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: background 0.3s, color 0.3s;
 }
 
@@ -190,4 +194,20 @@
 .member-block .info-box span {
   font-size: var(--font-size);
   color: #777;
+}
+
+@media (max-width: 1200px) {
+  .member-section .sec-title {
+    text-align: center;
+  }
+
+  .member-header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .member-section .sec-title h2 {
+    font-size: 36px;
+  }
 }

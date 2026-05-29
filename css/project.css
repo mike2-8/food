@@ -146,13 +146,7 @@
 }
 
 @media (max-width: 768px) {
-  .project-section .sec-title h2 {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 576px) {
-  .project-section .sec-title h2 {
-    font-size: 24px;
-  }
+    .project-section .large-container {
+        padding: 0 ; 
+    }
 }
