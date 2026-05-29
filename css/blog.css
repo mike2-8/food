@@ -4,14 +4,6 @@
     padding: 80px 0 100px;
 }
 
-/* HEADER */
-.blog-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
 .blog-section .sec-title .sub-title {
     color: var(--primary-color);
     font-size: 13px;
@@ -32,28 +24,51 @@
 }
 
 .blog-section .sec-title h2 {
-    font-size: 46px;
+    width: 100%;
+    display: block;
+    font-size: 47px;
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--bs-dark);
     line-height: 1.2;
 }
 
+/* HEADER */
+.blog-header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
 /* MORE BLOGS BUTTON */
 .btn-more-blogs {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     background: var(--primary-color);
     color: var(--bs-white);
-    padding: 16px 36px;
-    font-size: 13px;
+
+    padding: 20px;
+
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
+    line-height: 1;
+
+    white-space: nowrap;
+
     text-decoration: none;
+
     position: relative;
     overflow: hidden;
+
     transition: color 0.4s ease;
+
     z-index: 1;
-    margin-top: 15px;
+    margin-top: 48px;
 }
 
 .btn-more-blogs::before {
@@ -75,6 +90,8 @@
 .btn-more-blogs:hover {
     color: var(--primary-color);
 }
+
+
 
 /* ROW */
 .blog-section .row {
@@ -144,6 +161,7 @@
     width: 200%;
     opacity: 0;
 }
+
 /* DATE BOX */
 .blog-block .date-box {
     position: absolute;
@@ -190,7 +208,7 @@
     color: var(--bs-dark);
     margin-bottom: 12px;
     line-height: 1.3;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 /* TEXT */
@@ -228,7 +246,11 @@
     }
 
     .blog-section .sec-title h2 {
-        font-size: 36px;
+        font-size: 48px;
+    }
+
+    .blog-section .sec-title h2 br {
+        display: none;
     }
 }
 
@@ -239,21 +261,35 @@
     }
 
     .blog-header {
-        flex-direction: column;  /*  title button xuống dòng */
-        align-items: center;    /* căn giữa */
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
+    .blog-header .btn-box {
+        display: flex;
+        align-items: center;
+    }
+
     .blog-header .sec-title {
-        flex: 1;               
-        padding-right: 30px;
+        width: 100%;
+        text-align: center;
     }
 
     .blog-section .sec-title .sub-title {
-        justify-content: center;  /* sub title ra giữa */
+        justify-content: center;
     }
 
     .blog-section .sec-title h2 {
-        font-size: 32px;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 47px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-section .sec-title h2 {
+        text-align: center;
     }
 }
