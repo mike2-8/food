@@ -56,6 +56,7 @@
 
 /* BLOCK */
 .testimonial-block .inner-box {
+    width: 100%;
     background: #2d3748;
     padding: 60px 40px 40px;
     text-align: center;
@@ -143,8 +144,12 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .testimonial-section .sec-title h2 {
         font-size: 36px;
+    }
+
+    .testimonial-block .inner-box {
+    padding: 60px 20px 30px;
     }
 }

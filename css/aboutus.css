@@ -130,17 +130,15 @@
 }
 
 @media (max-width: 768px) {
-    .about-section-two .list-style-two.two-column li {
-        width: 100%;    /* ← từ 50% thành 100%, gộp thành 1 cột */
-    }
-}
-
-@media (max-width: 576px) {
     .about-section-two .content-column .inner-column {
         padding: 40px 20px;
     }
 
     .about-section-two h2 {
         font-size: 36px;
+    }
+
+        .about-section-two .list-style-two.two-column li {
+        width: 100%;    /* ← từ 50% thành 100%, gộp thành 1 cột */
     }
 }

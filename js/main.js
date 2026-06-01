@@ -126,7 +126,7 @@ $('.testimonial-carousel').owlCarousel({
     dots: true,
     autoplay: false,
     responsive: {
-        0: { items: 1 },
-        992: { items: 2 }    
+        0: { items: 1},
+        992: { items: 2}    
     }
 });
