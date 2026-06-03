@@ -32,16 +32,17 @@ function runCounters() {
 }
 
 const factSection = document.querySelector('.fun-fact-section');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !counted) {
-            counted = true;
-            runCounters();
-        }
-    });
-}, { threshold: 0.3 });
-
-observer.observe(factSection);
+if (factSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !counted) {
+                counted = true;
+                runCounters();
+            }
+        });
+    }, { threshold: 0.3 });
+    observer.observe(factSection);
+}
 
 // ---- 3. MOBILE SIDEBAR ----
 const hamburger = document.getElementById('hamburger');
@@ -49,20 +50,26 @@ const mobileSidebar = document.getElementById('mobileSidebar');
 const mobileOverlay = document.getElementById('mobileOverlay');
 const sidebarClose = document.getElementById('sidebarClose');
 
-hamburger.addEventListener('click', () => {
-    mobileSidebar.classList.add('active');
-    mobileOverlay.classList.add('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        mobileSidebar.classList.add('active');
+        mobileOverlay.classList.add('active');
+    });
+}
 
-sidebarClose.addEventListener('click', () => {
-    mobileSidebar.classList.remove('active');
-    mobileOverlay.classList.remove('active');
-});
+if (sidebarClose) {
+    sidebarClose.addEventListener('click', () => {
+        mobileSidebar.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+    });
+}
 
-mobileOverlay.addEventListener('click', () => {
-    mobileSidebar.classList.remove('active');
-    mobileOverlay.classList.remove('active');
-});
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        mobileSidebar.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+    });
+}
 
 document.querySelectorAll('.sidebar-dropdown > a').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -77,56 +84,83 @@ document.querySelectorAll('.sidebar-dropdown > a').forEach(link => {
 // ---- 4 & 5. OWL CAROUSEL ----
 $(document).ready(function () {
 
-    // Project carousel
-    $('.project-carousel').owlCarousel({
-        loop: true,
-        margin: 15,
-        nav: false,
-        dots: true,
-        autoplay: false,
-        responsive: {
-            0: { items: 1 },
-            576: { items: 2 },
-            992: { items: 3 },
-            1204: { items: 4 }
-        }
-    });
+    if ($('.project-carousel').length) {
+        $('.project-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            responsive: {
+                0: { items: 1 },
+                576: { items: 2 },
+                992: { items: 3 },
+                1204: { items: 4 }
+            }
+        });
+    }
 
-    // Member carousel
-    var memberOwl = $('.member-carousel').owlCarousel({
-        loop: false,
-        margin: 20,
-        nav: false,
-        dots: false,
-        autoplay: false,
-        items: 1,
-        responsive: {
-    
-            576: { items: 2 },
-            992: { items: 3 }
-        }
-    });
+    if ($('.member-carousel').length) {
+        var memberOwl = $('.member-carousel').owlCarousel({
+            loop: false,
+            margin: 20,
+            nav: false,
+            dots: false,
+            autoplay: false,
+            items: 1,
+            responsive: {
+                576: { items: 2 },
+                992: { items: 3 }
+            }
+        });
 
-    // Nút mũi tên desktop và mobile
-    $('.prev-btn, .prev-btn-bottom').on('click', function () {
-        memberOwl.trigger('prev.owl.carousel');
-    });
+        $('.prev-btn, .prev-btn-bottom').on('click', function () {
+            memberOwl.trigger('prev.owl.carousel');
+        });
 
-    $('.next-btn, .next-btn-bottom').on('click', function () {
-        memberOwl.trigger('next.owl.carousel');
-    });
+        $('.next-btn, .next-btn-bottom').on('click', function () {
+            memberOwl.trigger('next.owl.carousel');
+        });
+    }
 
-});
-
-// Testimonial carousel
-$('.testimonial-carousel').owlCarousel({
-    loop: true,
-    margin: 30,
-    nav: false,
-    dots: true,
-    autoplay: false,
-    responsive: {
-        0: { items: 1},
-        992: { items: 2}    
+    if ($('.testimonial-carousel').length) {
+        $('.testimonial-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: false,
+            responsive: {
+                0: { items: 1 },
+                992: { items: 2 }
+            }
+        });
     }
 });
+
+// ---- HIDDEN BAR ----
+const toggleHiddenBar = document.querySelector('.toggle-hidden-bar');
+const hiddenBar = document.getElementById('hiddenBar');
+const hiddenBarOverlay = document.getElementById('hiddenBarOverlay');
+const hiddenBarClose = document.getElementById('hiddenBarClose');
+
+if (toggleHiddenBar) {
+    toggleHiddenBar.addEventListener('click', () => {
+        hiddenBar.classList.add('active');
+        hiddenBarOverlay.classList.add('active');
+    });
+}
+
+if (hiddenBarClose) {
+    hiddenBarClose.addEventListener('click', () => {
+        hiddenBar.classList.remove('active');
+        hiddenBarOverlay.classList.remove('active');
+    });
+}
+
+if (hiddenBarOverlay) {
+    hiddenBarOverlay.addEventListener('click', () => {
+        hiddenBar.classList.remove('active');
+        hiddenBarOverlay.classList.remove('active');
+    });
+}

@@ -7,6 +7,7 @@
 --font-theme:'Plus Jakarta Sans', sans-serif;
 --font-heading:'Oswald', sans-serif;
 --font-size: 14px;
+--header-height: 103px;
 }
 
 *{
@@ -42,7 +43,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 900;
   background: var(--bs-white);
   backdrop-filter: none;
   transform: translateY(0);  /* thêm dòng này */

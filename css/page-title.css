@@ -1,0 +1,122 @@
+.page-title {
+    background-color: #f5f5f0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+body {
+    padding-top: var(--header-height);
+}
+
+.auto-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-title .title-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-title .title {
+    font-size: 60px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--bs-dark);
+    margin: 0;
+}
+
+.page-breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-breadcrumb li {
+    font-size: 15px;
+    color: #777;
+}
+
+.page-breadcrumb li a {
+    color: var(--bs-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.page-breadcrumb li a:hover {
+    color: var(--primary-color);
+}
+
+.page-breadcrumb li+li::before {
+    content: '›';
+    margin-right: 10px;
+    color: var(--bs-dark);
+}
+
+.outer-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ui-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: var(--bs-dark);
+    transition: color 0.3s;
+}
+
+.ui-btn:hover {
+    color: var(--primary-color);
+}
+
+.search-btn i {
+    font-size: 18px;
+}
+
+.toggle-hidden-bar {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.toggle-hidden-bar .line {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--bs-dark);
+    transition: 0.3s;
+}
+
+.header .container1 {
+    position: relative;
+}
+
+.header .container1 .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.header .container1 .outer-box {
+    position: absolute;
+    left: calc(50% + 320px); 
+}

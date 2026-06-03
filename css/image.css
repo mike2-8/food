@@ -1,0 +1,46 @@
+.section-image {
+    padding: 100px 0;
+}
+
+.box-image__exper{
+    background: green;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.section-image-flex {
+    display: flex;
+    align-items: stretch;
+    gap: 0px;
+}
+
+.box-image-1 {
+    position: relative;
+}
+
+.box-image-1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box-image-2 {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 50%;
+    transform: translateY(-50%);
+}
+
+.box-image-2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box-left {
+    flex-shrink: 0;
+}
+

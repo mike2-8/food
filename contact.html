@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.x.x/dist/css/bootstrap.min.css"> -->
+    <title>Archisky bản rep1:1</title>
+
+    <!-- CSS chung -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- CSS riêng trang contact -->
+    <link rel="stylesheet" href="css/page-title.css" />
+    <link rel="stylesheet" href="css/contact-detail.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container1">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Archisky Logo">
+                </a>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html">HOME <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Home Style 01</a></li>
+                            <li><a href="#">Home Style 02</a></li>
+                            <li><a href="#">Home Style 03</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">SERVICES <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Services Grid</a></li>
+                            <li><a href="#">Services Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">BLOG <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Blog Grid</a></li>
+                            <li><a href="#">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">PAGES <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li class="dropdown-sub">
+                                <a href="#">Projects <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu-sub">
+                                    <li><a href="#">Projects Grid</a></li>
+                                    <li><a href="#">Projects Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">404</a></li>
+                            <li class="dropdown-sub">
+                                <a href="#">Team <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu-sub">
+                                    <li><a href="#">Team List</a></li>
+                                    <li><a href="#">Team Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-sub">
+                                <a href="#">Shop <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu-sub">
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Products With Sidebar</a></li>
+                                    <li><a href="#">Product Details</a></li>
+                                    <li><a href="#">Cart</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Outer Box -->
+            <div class="outer-box">
+                <!-- Header Search -->
+                <button class="ui-btn search-btn">
+                    <i class="icon fa fa-search"></i>
+                </button>
+
+                <button class="ui-btn ui-btn toggle-hidden-bar">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-title" id="page-title">
+        <div class="auto-container">
+            <div class="title-outer">
+                <h1 class="title">Contact</h1>
+                <ul class="page-breadcrumb">
+                    <li><a href="index.html">HOME</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT DETAIL -->
+    <section class="contact-detail">
+        <div class="auto-container">
+            <div class="row">
+
+                <!-- CỘT TRÁI: Form -->
+                <div class="col-left">
+                    <div class="sec-title">
+                        <span class="sub-title">SEND US EMAIL</span>
+                        <h2>Feel free to write</h2>
+                    </div>
+
+                    <div class="contact-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Enter Name">
+                            <input type="email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Enter Subject">
+                            <input type="text" placeholder="Enter Phone">
+                        </div>
+                        <textarea placeholder="Enter Message"></textarea>
+                        <div class="form-btns">
+                            <button class="btn-send"><span>SEND MESSAGE</span></button>
+                            <button class="btn-reset"><span>RESET</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CỘT PHẢI: Info -->
+                <div class="col-right">
+                    <div class="sec-title">
+                        <span class="sub-title">NEED ANY HELP?</span>
+                        <h2>Get in touch with us</h2>
+                    </div>
+                    <p class="desc">Lorem ipsum is simply free text available dolor sit amet consectetur notted
+                        adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</p>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>Have any question?</h5>
+                                <p>Free +92 (020)-9850</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>Write email</h5>
+                                <p>needhelp@company.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box">
+                                <i class="fa fa-location-arrow"></i>
+                            </div>
+                            <div class="info-text">
+                                <h5>Visit anytime</h5>
+                                <p>66 broklyn golden street. New York</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HIDDEN BAR OVERLAY -->
+    <div class="mobile-overlay" id="hiddenBarOverlay"></div>
+
+    <!-- HIDDEN BAR -->
+    <div class="mobile-sidebar" id="hiddenBar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <a href="#"><img src="images/logo-white.png" alt="Archisky Logo"></a>
+            </div>
+            <button class="sidebar-close" id="hiddenBarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-contact">
+            <h3
+                style="color:var(--bs-white); font-family:var(--font-heading); font-size:24px; line-height:1.4; margin-bottom:16px;">
+                Transforming your ideas into digital reality
+            </h3>
+            <p style="color:rgba(255, 255, 255, 0.87); font-size:16px; line-height:1.8; margin-bottom:10px;">
+                Sed ut perspiciatis unde omnis natus error voluptatem santium doloremque laudantium, totam rem
+                aperiam.
+            </p>
+
+            <div class="sidebar-contact-item">
+                <div class="sidebar-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="sidebar-contact-text">
+                    <span>CALL NOW</span>
+                    <a href="tel:+928800098670">+92(8800) - 98670</a>
+                </div>
+            </div>
+            <div class="sidebar-contact-item">
+                <div class="sidebar-contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="sidebar-contact-text">
+                    <span>SEND EMAIL</span>
+                    <a href="mailto:help@company.com">help@company.com</a>
+                </div>
+            </div>
+            <div class="sidebar-contact-item">
+                <div class="sidebar-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="sidebar-contact-text">
+                    <span>ADDRESS</span>
+                    <a href="#">66 Broklyant, New York India 3269</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery (bắt buộc) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="js/main.js"></script>
+</body>
