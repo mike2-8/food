@@ -164,3 +164,64 @@ if (hiddenBarOverlay) {
         hiddenBarOverlay.classList.remove('active');
     });
 }
+
+
+// ---- LEAFLET MAP ---- khởi tạo map và thiết lập view ban đầu
+const map = L.map('map', {
+    scrollWheelZoom: false
+}).setView([10.0480652, 105.7600721], 16);
+
+const mapEl = document.getElementById('map');
+
+mapEl.addEventListener('wheel', function (e) {
+    if (!e.ctrlKey) {
+        map.scrollWheelZoom.disable();
+        mapEl.classList.add('show-scroll-hint');
+        clearTimeout(mapEl._hintTimeout);
+        mapEl._hintTimeout = setTimeout(() => {
+            mapEl.classList.remove('show-scroll-hint');
+        }, 1500);
+    } else {
+        map.scrollWheelZoom.enable();
+    }
+});
+
+// Các lớp bản đồ
+const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+});
+// Lớp bản đồ vệ tinh
+const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '&copy; Esri'
+});
+
+streetLayer.addTo(map);
+
+L.control.layers({
+    'Street': streetLayer,
+    'Satellite': satelliteLayer
+}).addTo(map);
+// Thêm marker với popup tùy chỉnh
+const marker = L.marker([10.0480652, 105.7600721]).addTo(map);
+
+marker.bindPopup(`
+    <div class="map-popup">
+        <div class="map-popup-header">
+            <div class="map-popup-info">
+                <h4>202 Đường Nguyễn Đệ</h4>
+                <p>202 Đường Nguyễn Đệ,<br>Bình Thủy, Cần Thơ</p>
+            </div>
+            <div class="map-popup-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=10.0480652,105.7600721" target="_blank" title="Xem trên Google Maps">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=10.0480652,105.7600721" target="_blank" title="Chỉ đường">
+                    <i class="fa-solid fa-diamond-turn-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+`, {
+    closeButton: false,
+    offset: [0, -10]
+}).openPopup();
