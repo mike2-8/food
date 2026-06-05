@@ -179,6 +179,15 @@ textarea.form-control {
     margin: 0;
 }
 
+.info-text p a {
+    color: #777;
+    text-decoration: none;
+}
+
+.info-text p a:hover {
+    color: var(--primary-color);
+}
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .contact-detail .row {
