@@ -125,4 +125,8 @@ body {
         align-items: flex-start;
         gap: 12px;
     }
+
+    .page-title .title {
+        font-size: 46px;
+    }
 }

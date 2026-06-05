@@ -8,12 +8,12 @@
 
     <!-- CSS chung -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/footer.css" />
 
     <!-- CSS riêng trang contact -->
     <link rel="stylesheet" href="css/page-title.css" />
     <link rel="stylesheet" href="css/contact-detail.css" />
     <link rel="stylesheet" href="css/contact-map.css" />
+    <link rel="stylesheet" href="css/contact-footer.css" />
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -260,7 +260,7 @@
                         <span class="sub-title">SEND US EMAIL</span>
                         <h2>Feel free to write</h2>
                     </div>
-                    <div class="contact-form">
+                    <form class="contact-form" onsubmit="return false;">
                         <div class="form-row">
                             <div class="mb-3">
                                 <label for="name" class="form-label"></label>
@@ -288,10 +288,10 @@
                             </div>
                         </div>
                         <div class="form-btns">
-                            <button class="btn-send"><span>SEND MESSAGE</span></button>
-                            <button class="btn-reset"><span>RESET</span></button>
+                            <button type="submit" class="btn-send"><span>SEND MESSAGE</span></button>
+                            <button type="reset" class="btn-reset"><span>RESET</span></button>
                         </div>
-                    </div>
+                    </form>
                 </div>
 
                 <!-- CỘT PHẢI -->
@@ -394,39 +394,24 @@
 
     <!-- FOOTER -->
     <footer class="main-footer" id="footer">
-        <form></form>
-
-        <!-- Top bar: logo + social -->
-        <div class="footer-top">
-            <div class="auto-container">
-                <div class="footer-top-inner">
-                    <div class="footer-logo">
-                        <img src="images/logo-white.png" alt="Archisky Logo">
-                    </div>
-                    <div class="footer-social">
-                        <span>Follow us:</span>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Main content -->
         <div class="footer-main">
             <div class="auto-container">
                 <div class="footer-grid">
 
-                    <!-- About Us -->
-                    <div class="footer-col footer-about">
-                        <h4 class="footer-title">About Us</h4>
-                        <p>Lorem Ipsum is simply is dumi oni is text Loremo Ipsum is simply is out dount no ourdummy
-                            text</p>
-                        <div class="footer-newsletter">
-                            <input type="email" placeholder="E-mail">
-                            <button type="button"><i class="fas fa-paper-plane"></i></button>
+                    <!-- Newsletter -->
+                    <div class="footer-col footer-newsletter-col">
+                        <div class="footer-logo-main">
+                            <img src="images/logo.png" alt="Archisky Logo">
+                        </div>
+                        <div class="footer-newsletter-box">
+                            <h4 class="footer-title">Newsletter</h4>
+                            <p>Lorem Ipsum is simpl dumi omy is text dummy text</p>
+                            <div class="footer-newsletter">
+                                <input type="email" placeholder="Email here">
+                                <button type="button"><i class="fas fa-paper-plane"></i></button>
+                            </div>
                         </div>
                     </div>
 
@@ -443,19 +428,6 @@
                         </ul>
                     </div>
 
-                    <!-- Get Free Link -->
-                    <div class="footer-col">
-                        <h4 class="footer-title">Get Free Link</h4>
-                        <ul class="footer-links has-arrow">
-                            <li><a href="#">Software Development</a></li>
-                            <li><a href="#">Data Analytics</a></li>
-                            <li><a href="#">IT Consulting</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Network Solutions</a></li>
-                            <li><a href="#">Others</a></li>
-                        </ul>
-                    </div>
-
                     <!-- Contact -->
                     <div class="footer-col footer-contact">
                         <h4 class="footer-title">Contact</h4>
@@ -467,15 +439,29 @@
                             </li>
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <a href="">6391 Elgin St. Celina, 10299</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <a href="tel:(629) 555–0129">(629) 555–0129</a>
+                                <a href="">6391 Elgin St. Celina, 10299</a>
                             </li>
                         </ul>
                     </div>
 
+                    <!-- THÊM cột Photo Gallery mới -->
+                    <div class="footer-col footer-gallery">
+                        <h4 class="footer-title">Photo Gallery</h4>
+                        <div class="footer-gallery-grid">
+                            <figure class="image"><a href="#"><img src="images/gallery-1.jpg" alt="Gallery 1"></a>
+                            </figure>
+                            <figure class="image"><a href="#"><img src="images/gallery-2.jpg" alt="Gallery 2"></a>
+                            </figure>
+                            <figure class="image"><a href="#"><img src="images/gallery-3.jpg" alt="Gallery 3"></a>
+                            </figure>
+                            <figure class="image"><a href="#"><img src="images/gallery-4.jpg" alt="Gallery 4"></a>
+                            </figure>
+                            <figure class="image"><a href="#"><img src="images/gallery-5.jpg" alt="Gallery 5"></a>
+                            </figure>
+                            <figure class="image"><a href="#"><img src="images/gallery-6.jpg" alt="Gallery 6"></a>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -484,12 +470,12 @@
         <div class="footer-bottom">
             <div class="auto-container">
                 <div class="footer-bottom-inner">
+                    <p>© archisky kodesolution | All Rights Reserved</p>
                     <ul class="footer-bottom-links">
                         <li><a href="#">Terms & Condition</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Contact us</a></li>
                     </ul>
-                    <p>© archisky kodesolution | All Rights Reserved</p>
                 </div>
             </div>
         </div>
